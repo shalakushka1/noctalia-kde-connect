@@ -19,7 +19,7 @@
     "send-file-picker": "Selecione o arquivo para enviar ao dispositivo",
     "send-file": "Enviar Arquivo",
     "find-device": "Encontrar meu Dispositivo",
-    "pair": "Emparelhar meu Dispotivo",
+    "pair": "Emparelhar meu Dispositivo",
     "unpair": "Desemparelhar meu dispositivo",
     "kdeconnect-error": {
       "no-devices": "Nenhum dispositivo executando o KDE Connect encontrado",
@@ -40,7 +40,7 @@
     "state": {
       "connected": "Conectado",
       "disconnected": "Desconectado",
-      "unavailable": "Indisponíve",
+      "unavailable": "Indisponível",
       "no-device": "Nenhum dispositivo",
       "not-paired": "Não pareado"
     }
