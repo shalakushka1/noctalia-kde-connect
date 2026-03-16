@@ -111,7 +111,11 @@ QtObject {
       return "";
 
     try {
-      return JSON.parse(text)?.data;
+      let result = JSON.parse(text)?.data;
+      if (Array.isArray(result) && Array.isArray(result[0]))
+        return result[0]
+      else
+        return result;
     } catch (e) {
       Logger.e("KDEConnect", "Failed to parse busctl response: ", text)
       return null;
@@ -165,7 +169,7 @@ QtObject {
     command: busctlCall("/modules/kdeconnect", "org.kde.kdeconnect.daemon", "devices")
     stdout: StdioCollector {
       onStreamFinished: {
-        const deviceIds = busctlData(text)[0];
+        const deviceIds = busctlData(text);
 
         root.pendingDevices = [];
         root.pendingDeviceCount = deviceIds.length;
